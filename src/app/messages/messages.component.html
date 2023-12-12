@@ -1,0 +1,9 @@
+<div *ngFor="let message of messages" class="message">
+    <img [src]="message.sender.profileImage" alt="{{ message.sender.username }}">
+    <div class="message-content">
+      <div class="message-sender">{{ message.sender.username }}</div>
+      <div class="message-text">{{ message.content }}</div>
+      <div class="message-time">{{ message.time | date: 'medium' }}</div>
+    </div>
+  </div>
+  

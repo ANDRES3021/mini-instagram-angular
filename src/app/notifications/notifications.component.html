@@ -1,0 +1,18 @@
+<section class="custom-notifications">
+    <div *ngIf="notifications.length > 0; else noNotifications">
+      <div *ngFor="let notification of notifications" class="custom-notification-item">
+        <img [src]="notification.sender.profileImage" alt="Perfil" (error)="handleImageError($event, notification)" class="custom-notification-image">
+        <div class="custom-notification-content">
+          <p>
+            <span class="custom-sender-name">{{ notification.sender.username }}</span>
+            {{ notification.message }}
+          </p>
+          <p class="custom-notification-time">{{ notification.time | date: 'medium' }}</p>
+        </div>
+      </div>
+    </div>
+    <ng-template #noNotifications>
+      <p class="custom-no-notifications">No tienes nuevas notificaciones.</p>
+    </ng-template>
+  </section>
+  

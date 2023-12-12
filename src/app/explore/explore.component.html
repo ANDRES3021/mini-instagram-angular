@@ -1,0 +1,14 @@
+<div class="custom-explore-container">
+    <div class="custom-explore-header">Explorer</div>
+    <div class="custom-explore-grid">
+      <div class="custom-explore-item" *ngFor="let imageUrl of images">
+        <img [src]="imageUrl" alt="Image">
+        <div class="custom-explore-overlay">
+          <div class="custom-explore-overlay-content">
+            <h3>Author Name</h3> <!-- Puedes personalizar aquí según tus necesidades -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
